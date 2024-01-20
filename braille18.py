@@ -1,3 +1,5 @@
+import braillelib
+
 #buttons:
 #   automatic
 #   rate
@@ -35,7 +37,19 @@ def text_to_braille(text):
 # braille_character on a vector of 1s and 0s representing the braille version
 # of the current character
 def braille_display_word(word):
-    pass
+    #parse the word into char
+    arr_braille = []
+    for letter in word:
+        arr_braille.append(braille_character(letter))
+    # print(arr_braille)
+    return arr_braille
+        
 
 def braille_character(bchar):
-    pass
+    char = braillelib.braille_dict.get(bchar)
+    # print(char)
+    return char
+
+
+# braille_character(":")
+braille_display_word("hello;'")
