@@ -52,4 +52,4 @@ def braille_character(bchar):
 
 
 # braille_character(":")
-# braille_display_word("hello;'")
+# braille_display_word("hi-bye ")
